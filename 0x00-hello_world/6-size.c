@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio>
 /**
  * main - new program
  *
@@ -6,13 +6,16 @@
  */
 int main(void)
 {
-int integerType;
-float floatType;
-double doubleType;
-char charType;
-printf("Size of int: %ld bytes\n", sizeof(integerType));
-printf("Size of float: %ld bytes\n", sizeof(floatType));
-printf("Size of double: %ld bytes\n", sizeof(doubleType));
-printf("Size of char: %ld bytes\n", sizeof(charType));
+int a;
+long int c;
+long long int e;
+char d;
+float b;
+
+printf("Size of int: %ld bytes\n", sizeof(a));
+printf("Size of float: %ld bytes\n", sizeof(b));
+printf("Size of long long int: %ld bytes\n", sizeof(e));
+printf("Size of char: %ld bytes\n", sizeof(d));
+printf("size of long int: %1d bytes\n", sizeof(c));
 return (0);
 }
