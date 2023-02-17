@@ -1,8 +1,8 @@
 #include <stdio>
 /**
- * main - new program
+ *main - new program
  *
- * Return: Always 0
+ *Return: Always 0
  */
 int main(void)
 {
