@@ -10,6 +10,6 @@ int main(void)
 
 	for (reverse = 'z'; reverse >= 'a'; reverse--)
 		putchar(reverse);
-	putchar('\n')
+	putchar('\n');
 	return (0);
 }
