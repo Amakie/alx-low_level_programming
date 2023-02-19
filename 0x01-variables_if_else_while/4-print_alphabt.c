@@ -9,7 +9,7 @@ int main(void)
 {
 	char qNe;
 
-	for (qNe = 'a'; qNe <= 'Z'; qNe++)
+	for (qNe = 'a'; qNe <= 'z'; qNe++)
 	{
 		if (qNe != 'e' && qNe != 'q')
 			putchar(qNe);
