@@ -5,7 +5,7 @@
  *
  * Return: Absolute value.
  */
-int _abs(int i);
+int _abs(int i)
 {
 	if (x >= 0)
 		return (i);
