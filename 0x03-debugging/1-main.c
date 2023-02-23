@@ -1,8 +1,7 @@
 #include <stdio.h>
-
 /**
  * main - causes an infinite loop
- * It should be a do while loop
+ * while (i < 10)
  * Return: 0
  */
 
