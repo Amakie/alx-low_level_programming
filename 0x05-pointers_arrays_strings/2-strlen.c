@@ -3,8 +3,9 @@
  * int _strlen - returns the length
  * @s: returns length of a string
  *
+ * return: strlen
  */
 int _strlen(char *s): returns length of a string
 {
-	strlen(*s)
+	int strlen(const char *s)
 }
