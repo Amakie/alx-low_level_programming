@@ -1,13 +1,12 @@
 #include <stdlib.h>
-#include "holberton.h"
+#include "main.h"
+
 /**
- * _strchr - locates a character in a string
+ * _strchr - locates character in string
+ * @s: string pointer variable
+ * @c: character variable
  *
- * @s: the string to check
- * @c: the character we're looking for
- *
- * Return: a pointer to the first occurance of the character @c in the string
- * @s. Return NULL if the character isn't found
+ * Return: s or NULL
  */
 
 char *_strchr(char *s, char c)
