@@ -8,7 +8,7 @@ int factorial(int n)
 {
 	if (n > 0)
 	{
-		_putchar(n * (n - 1));
+		(n * (n - 1));
 	}
 	else
 	{
