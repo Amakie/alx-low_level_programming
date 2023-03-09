@@ -5,7 +5,7 @@
  * @s: input character
  * Return: Always 0
  */
-int _strlen_recursion(char *s);
+int _strlen_recursion(char *s)
 {
 	if
 	{
