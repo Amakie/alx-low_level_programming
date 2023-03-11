@@ -1,14 +1,15 @@
 #include "main.h"
-/**
- * print_alphabet - Prints lowercase alphabets
- *
- * Return: Always 0
- */
-void print_alphabet(void)
-{
-	char low_alpha;
 
-	for (low_alpha = 'a'; low_alpha <= 'z'; low_alpha++)
-		_putchar(low_alpha);
-	_putchar('\n');
+/**
+ * _isdigit - Checks for a digit (0-9).
+ * @c: The number to be checked.
+ *
+ * Return: 1 if the number is a digit, 0 otherwise.
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
