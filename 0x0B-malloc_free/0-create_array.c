@@ -18,8 +18,10 @@ char *create_array(unsigned int size, char c)
 	{
 		ptr = malloc(size * sizeof(char));
 	}
-	for (size == 0; a < size; a++)
+	for (a == 0; a < size; a++)
 	{
 		ptr[a] = c;
 	}
+
+	return (ptr);
 }
