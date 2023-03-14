@@ -7,7 +7,7 @@
  * @c: character to the pointer
  * @size: size of the unsigned integer
  *
- * Return: NULL
+ * Return: ptr
  */
 
 char *create_array(unsigned int size, char c)
