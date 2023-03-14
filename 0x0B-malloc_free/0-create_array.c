@@ -1,28 +1,35 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * create_array - creates an array
- * @c: character to the pointer
- * @size: size of the unsigned integer
+ * create_array - allocates enough memory
+ * @c: character variable
+ * @size: size to be assigneed
  *
- * Return: ptr
+ * Return: returns pointer
  */
 
 char *create_array(unsigned int size, char c)
 {
-	char *ptr;
-	unsigned int a;
+	char *myPointer;
+	unsigned int i;
 
+	if (size == 0)
 	{
-		ptr = malloc(size * sizeof(char));
-
-	}
-	for (a = 0; a < size; a++)
-	{
-		ptr[a] = c;
+		return (NULL);
 	}
 
-	return (ptr);
+	myPointer = (char *) malloc(size * sizeof(char));
+
+	if (!myPointer)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < size; i++)
+	{
+		myPointer[i] = c;
+	}
+	return (myPointer);
 }
