@@ -12,7 +12,7 @@ int main(int argc, int number_1, int number_2, int product)
 {
 	product = number_1 * number_2;
 
-	if (argc == 2)
+	if (argc == 1) (argc == 2)
 
 	{
 		printf("%d\n", product);
