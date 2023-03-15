@@ -19,7 +19,7 @@ int main(int argc, int number_1, int number_2, int product)
 	}
 	else
 	{
-		printf("error\n");
+		printf("Error\n");
 
 		return (1);
 	}
