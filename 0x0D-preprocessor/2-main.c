@@ -4,7 +4,7 @@
 /*
  * main - write a program to print name
  *
- * return: Always 0
+ * Return: Always 0
  */
 int main(void)
 {
