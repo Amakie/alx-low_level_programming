@@ -1,5 +1,5 @@
 #include "function_pointers.h"
-#include <stdio.h>
+#include <stlib.h>
 
 /**
  * print_name - print name of function
@@ -10,9 +10,8 @@
  */
 void print_name(char *name, void (*f)(char *));
 {
+	if ((!name) || (!f))
+	return (0);
+
 	f(name);
-}
-{
-	_putchar('f');
-	_putchar('\n');
 }
