@@ -10,9 +10,9 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int a;
-
 	va_list myintegers;
+
+	unsigned int a;
 
 	va_start(myintegers, n);
 
@@ -24,7 +24,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", va_arg(myintegers, int));
 	}
 
-	printf("\n");
-
 	va_end(myintegers);
+	printf("\n");
 }
