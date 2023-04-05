@@ -2,20 +2,22 @@
 /**
  * sum_listint - adds the sum of all data n
  * @head: pointer that points to the list
- * @n: interget
+ *
  *
  * Return: 0
  */
 int sum_listint(listint_t *head)
 {
-	int add = 0;
-       
-	add = add + head->n;
-	head = head->next;
+	int add;
 
-	if (head == NULL)
+	add = 0;
+
+	while (head == NULL)
 		return (0);
-	else
 
+	{
+		add = add + head->n;
+		head = head->next;
+	}
 		return (add);
 }
