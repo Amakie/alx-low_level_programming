@@ -15,6 +15,9 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
+	if (b == '\0')
+		return;
+
 	for (a = 0; b[a] == '0' || b[a] == '1'; a++)
 	{
 		conv_num <<= 1;
