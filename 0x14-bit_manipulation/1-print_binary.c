@@ -14,10 +14,10 @@ void print_binary(unsigned long int n)
 	for (a = 1 << 31; a > 0; a = a / 2)
 		if (n & 1)
 		{
-			_putchar("1");
+			putchar("1");
 		}
 		else
 		{
-			_putchar("0");
+			putchar("0");
 		}
 }
