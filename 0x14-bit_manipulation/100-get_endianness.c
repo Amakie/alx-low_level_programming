@@ -8,7 +8,7 @@
 int get_endianness(void)
 {
 	unsigned int num_check = 0x12345678;
-	char (*ptr) = char (&num_check);
+	char (*ptr) = (char *)&num_check;
 
 	if (*ptr == 0x12)
 	{
