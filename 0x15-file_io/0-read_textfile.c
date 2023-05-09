@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	file_des = fopen(filename, O_RDONLY);
+	file_des = open(filename, O_RDONLY);
 	if (file_des == -1)
 	{
 		return (0);
@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buff = malloc(sizeof(char) * (letters));
 	if (buff == NULL)
 	{
-		fclose(file_des);
+		close(file_des);
 		return (0);
 	}
 
