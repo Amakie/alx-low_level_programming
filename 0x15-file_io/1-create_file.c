@@ -31,7 +31,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		write_f = write(file_des, strlen(text_content), text_content);
+		write_f = write(file_des, text_content, strlen(text_content));
 		if (write_f == -1)
 		{
 			close(file_des);
