@@ -15,7 +15,8 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file_des;
-	ssize_t write_f;
+	int num_lett;
+	int perm;
 
 	if (filename == NULL)
 	{
@@ -29,15 +30,18 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	if (text_content != NULL)
-	{
-		write_f = write(file_des, text_content, strlen(text_content));
-		if (write_f == -1)
-		{
-			close(file_des);
-			return (-1);
-		}
-	}
+	if (!text_content)
+		text_content = "";
+
+	for (num_lett = 0; text_content[num_lett]; num_lett++)
+		;
+
+	perm = write(file_des, text_content, num_lett);
+	if (perm == -1)
+
+		close(file_des);
+		return (-1);
+
 
 	close(file_des);
 	return (1);
