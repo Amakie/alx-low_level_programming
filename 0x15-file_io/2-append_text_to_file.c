@@ -18,7 +18,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	int num_lett;
 	int perm;
 
-	if (!filename)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
