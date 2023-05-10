@@ -6,7 +6,6 @@
 #include <fcntl.h>
 
 void chk_status(int status, int file_des, char* filename, char mode);
-
 /**
  * main - copies content from one file to another
  * @argv: arguments passed
@@ -22,7 +21,7 @@ void main(int argc, char* argv[])
 
 	if (argc != 3)
 	{
-		dprintf(FILENO_STDERR, "%S" "Usage: cp file_from file_to");
+		dprintf(FILENO_STDERR, "%s" "Usage: cp file_from file_to");
 		exit (97);
 	}
 	source = open(argv[1], O_RDONLY);
@@ -40,5 +39,35 @@ void main(int argc, char* argv[])
 	}
 	close_source = close(source);
 	chk_status(close_source, source, NULL, 'C');
+	close_dest = close(dest);
+	chk_status(close_dest, dest, NULL, 'C');
+	return (0);
+}
 
+/**
+ * chk_status -checks the open and close status of the file
+ * @status:file descriptor for opened file
+ * @filename: filename
+ * @file_des: file descriptor
+ * @mode: open and close mode
+ * 
+ * Return: void
+ */
+void chk_status(int status, int file_des, char *filename, char mode)
+{
+	if (mode == 'C' && status == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n" file_des);
+		exit(100);
+	}
+	else if (mode == 'O' && status == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		exit(98);
+	}
+	else if (mode == 'W' && status == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		exit(99);
+	}
 }
