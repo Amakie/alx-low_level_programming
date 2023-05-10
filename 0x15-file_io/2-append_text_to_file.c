@@ -23,7 +23,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	file_des = open(filename, O_APPEND);
+	file_des = open(filename, O_WRONLY, O_APPEND);
 
 	if (file_des == -1)
 	{
